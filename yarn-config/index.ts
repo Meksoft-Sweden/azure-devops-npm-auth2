@@ -1,9 +1,9 @@
-import * as os from "os";
-import * as url from "url";
-import * as path from "path";
-import YamlConfig, { YamlSettings } from "./yaml-config";
+import os from "os";
+import url from "url";
+import path from "path";
+import YamlConfig, { YamlSettings } from "./yaml-config.js";
 import { execSync } from "child_process";
-import { NpmConfig } from "../npm-config";
+import { NpmConfig } from "../npm-config/index.js";
 
 class YarnConfig extends YamlConfig {
   private npmConfig: NpmConfig;

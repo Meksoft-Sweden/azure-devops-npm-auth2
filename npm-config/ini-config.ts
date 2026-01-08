@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as ini from "ini";
+import fs from "fs";
+import ini from "ini";
 
 class IniConfig {
 

@@ -1,4 +1,4 @@
-import { ClientMetadata, ClientAuthMethod, ResponseType } from "openid-client";
+import type { ClientMetadata, ClientAuthMethod, ResponseType } from "openid-client";
 
 class MsoDeviceCodeClientMedata implements ClientMetadata {
     // Defaulted values for device flow

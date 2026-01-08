@@ -1,7 +1,7 @@
-import * as os from "os";
-import * as url from "url";
-import * as path from "path";
-import IniConfig from "./ini-config";
+import os from "os";
+import url from "url";
+import path from "path";
+import IniConfig from "./ini-config.js";
 import { execSync } from "child_process";
 
 class NpmConfig extends IniConfig {

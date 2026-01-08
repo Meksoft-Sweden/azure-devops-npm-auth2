@@ -1,11 +1,13 @@
-import * as chalk from "chalk";
-import { MsoIssuer, MsoDeviceCodeClientMedata } from "./authentication";
-import { custom, Client } from "openid-client";
-import { UserNpmConfig, ProjectNpmConfig } from "./npm-config";
-import { UserYarnConfig, ProjectYarnConfig } from "./yarn-config";
+import chalk from "chalk";
+import { MsoIssuer, MsoDeviceCodeClientMedata } from "./authentication/index.js";
+import openidClient from "openid-client";
+import type { Client } from "openid-client";
+const { custom } = openidClient;
+import { UserNpmConfig, ProjectNpmConfig } from "./npm-config/index.js";
+import { UserYarnConfig, ProjectYarnConfig } from "./yarn-config/index.js";
 import { resolve } from "path";
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
 
 const AZDEVOPS_RESOURCE_ID = "499b84ac-1321-427f-aa17-267ca6975798";
 const AZDEVOPS_AUTH_CLIENT_ID = "f9d5fef7-a410-4582-bb27-68a319b1e5a1";

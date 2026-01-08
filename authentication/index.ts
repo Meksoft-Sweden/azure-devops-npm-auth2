@@ -1,5 +1,5 @@
-import MsoIssuer from "./mso-issuer";
-import MsoDeviceCodeClientMedata from "./mso-device-code-client-metadata";
+import MsoIssuer from "./mso-issuer.js";
+import MsoDeviceCodeClientMedata from "./mso-device-code-client-metadata.js";
 
 export {
     MsoIssuer,

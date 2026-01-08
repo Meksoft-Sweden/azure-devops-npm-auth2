@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-import { run } from "./index";
+import { run } from "./index.js";
+import minimist from "minimist";
 
-const args = require("minimist")(process.argv.slice(2), {
+const args = minimist(process.argv.slice(2), {
   alias: {
     cid: "client_id",
     tid: "tenant_id",
