@@ -1,4 +1,23 @@
-# azure-devops-npm-auth
+# azure-devops-npm-auth2
+## ⚠️ Fork Notice & Maintenance Status
+**This is a maintained fork of** `azure-devops-npm-auth`.\
+The original repository is no longer actively maintained and depends on third-party packages with known vulnerabilities.
+This fork exists to keep the project usable, secure, and up to date.
+
+## Project Status & Rationale
+
+This repository is a maintained fork created to support our team’s continued use of the functionality originally provided by `azure-devops-npm-auth`.
+
+The original project has not received updates for an extended period and currently depends on third-party packages with known vulnerabilities. As a result, it was no longer viable for use in our environment.
+
+In this fork, all third-party dependencies have been updated to current, secure versions where possible. The openid-connect dependency was intentionally left unchanged, as upgrading it would introduce significant breaking changes. I did not have the capacity to address those changes at this time; however, pull requests to upgrade this dependency are very welcome.
+
+In addition to dependency updates, this fork includes several quality-of-life improvements:
+* More colorized and readable console output
+* Automatic browser launch on Enter key press
+* Automatic copying of the device code to the clipboard
+
+## azure-devops-npm-auth
 
 Uses the [OAuth 2 device code flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code) to authenticate against the Azure DevOps artifact private registry.
 
@@ -35,6 +54,15 @@ When installing packages using `npm i`, the preinstallation script will be execu
 Follow the instructions to login and authenticate npm to the Azure DevOps private feed.  The following installation should be able to use the **refresh token** and automate the task of authenticating:
 
 ![az devops device code refresh](https://i.imgur.com/oC3YGHm.png)
+
+### Example output after fork
+
+The updated command output looks like in the image below. In the example it can be seen that two registries have been found.
+1. The first Github registry found uses the refresh token. 
+2. The second DevOps registry launches the device code flow.
+
+![output after update](doc/command_output.png)
+
 
 ## Advanced Usage 🧙‍♂️
 
